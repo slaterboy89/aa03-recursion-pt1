@@ -11,11 +11,29 @@ sumToN(9)  // returns 45
 sumToN(-8)  // returns null
 ***********************************************************************/
 
+// input: number 
+// output: number sum 
+// recursive solution 
+function sumToN(n) { 
+  // base case 
+  if (n === 0) return n;
+  // edge case 
+  if (n < 0) return null;
+  // recusive case 
+  return n + sumToN(n - 1);
 
-function sumToN(n) {
-  // Your code here 
+  // solution for-loop 
+  // let sum = 0; 
+  // for (let i = n; i > 0 ; i--) {
+  //   sum += i;  
+  // }
+  // return sum; 
 }
+console.log(sumToN(5)) // returns 15
 
+console.log(sumToN(1))  // returns 1
+console.log(sumToN(9))  // returns 45
+console.log(sumToN(-8))  // returns null
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
