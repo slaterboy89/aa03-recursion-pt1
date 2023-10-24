@@ -12,10 +12,15 @@ range(7, 6); // []
 
 
 function range(start, end) {
-  // Your code here 
+  // Your code here
+  let newArr = [];
+  if (end <= start) return [];
+  return [start].concat(range(start + 1, end))
 }
 
-
+range(1, 5); // [1, 2, 3, 4]
+range(3, 4); // [3]
+range(7, 6); // []
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = range;
